@@ -22,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
         Observable<String> naverObservable =
             Observable.create(emitter -> {
-                Remote.getUrlByGet("naver.com");
+                emitter.onNext(Remote.getUrlByGet("naver.com"));
             }
             );
 
         Observable<String> cnetObservable =
             Observable.create(emitter -> {
-                        Remote.getUrlByGet("www.cnet.co.kr");
-                    }
+                emitter.onNext(Remote.getUrlByGet("www.cnet.co.kr"));
+            }
             );
 
         cnetObservable
