@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         Observable<String> cnetObservable =
             Observable.create(emitter -> {
-                emitter.onNext(Remote.getUrlByGet("www.cnet.co.kr"));
+                emitter.onNext( Remote.getUrlByGet("www.cnet.co.kr") );
             }
             );
 
